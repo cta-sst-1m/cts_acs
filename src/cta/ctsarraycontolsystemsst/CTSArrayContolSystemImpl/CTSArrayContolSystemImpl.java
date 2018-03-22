@@ -144,11 +144,11 @@ public class CTSArrayContolSystemImpl extends CharacteristicComponentImpl implem
 	}
 	@Override
 	public ROlong board0_AC_DCDC() {
-		return (ROlongLong)getProperty(KEY_BOARD0_AC_DCDC);
+		return (ROlong)getProperty(KEY_BOARD0_AC_DCDC);
 	}
 	@Override
 	public ROlong board0_DC_DCDC() {
-		return (ROlongLong)getProperty(KEY_BOARD0_DC_DCDC);
+		return (ROlong)getProperty(KEY_BOARD0_DC_DCDC);
 	}
 	@Override
 	public ROlongLong board0_DC_DAC() {
