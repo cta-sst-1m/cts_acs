@@ -26,15 +26,15 @@ module ctsarraycontolsystemsst {
     void DCDC_OFF();
     long set_ac_level(in long inPatch, in long inLevel);
     long set_dc_level(in long inBoard, in long inLevel);
-    string set_led_status(in string inLedType, in long inLed, in bool inStatus);
+    string set_led_status(in string inLedType, in long inLed, in boolean inStatus);
     /**
     * CTS variables
     **/
     readonly attribute ACS::ROlongLong opcuaTime;
-    attribute board0_AC_DCDC attribute ACS::ROlong
-    attribute board0_DC_DCDC attribute ACS::ROlong
-    attribute board0_DC_DAC attribute ACS::ROlongLong
-    attribute patch1_AC_DAC attribute ACS::ROlongLong
+    attribute ACS::ROlong board0_AC_DCDC;
+    attribute ACS::ROlong board0_DC_DCDC;
+    attribute ACS::ROlongLong board0_DC_DAC;
+    attribute ACS::ROlongLong patch1_AC_DAC;
   };
 };
 #endif
