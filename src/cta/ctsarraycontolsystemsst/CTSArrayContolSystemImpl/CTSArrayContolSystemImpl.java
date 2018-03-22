@@ -127,6 +127,7 @@ public class CTSArrayContolSystemImpl extends CharacteristicComponentImpl implem
 	public void initialize(ContainerServices containerServices) throws ComponentLifecycleException {
 		super.initialize(containerServices);		
 		try {
+            // Creates keys for properties
 			createPropertyLong(KEY_OPCUATIME);
 			createPropertyLong(KEY_BOARD0_AC_DCDC);
 			createPropertyLong(KEY_BOARD0_DC_DCDC);
@@ -137,7 +138,7 @@ public class CTSArrayContolSystemImpl extends CharacteristicComponentImpl implem
 			return;
 		}
 	}
-
+    // Overide functions to get properties.
 	@Override
 	public ROlongLong opcuaTime() {
 		return (ROlongLong) getProperty(KEY_OPCUATIME);
@@ -158,6 +159,7 @@ public class CTSArrayContolSystemImpl extends CharacteristicComponentImpl implem
 	public ROlongLong patch1_AC_DAC() {
 		return (ROlongLong)getProperty(KEY_PATCH1_AC_DAC);
 	}
+    // overide functions to call OPCUA functions
 	@Override
 	public int DCDC_ON() {
 		return execUAMethod(METHODS_CTS, "DCDC_ON", new Object[] {});

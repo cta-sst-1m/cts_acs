@@ -31,10 +31,10 @@ module ctsarraycontolsystemsst {
     * CTS variables
     **/
     readonly attribute ACS::ROlongLong opcuaTime;
-    attribute ACS::ROlong board0_AC_DCDC;
-    attribute ACS::ROlong board0_DC_DCDC;
-    attribute ACS::ROlongLong board0_DC_DAC;
-    attribute ACS::ROlongLong patch1_AC_DAC;
+    readonly attribute ACS::ROlong board0_AC_DCDC;
+    readonly attribute ACS::ROlong board0_DC_DCDC;
+    readonly attribute ACS::ROlongLong board0_DC_DAC;
+    readonly attribute ACS::ROlongLong patch1_AC_DAC;
   };
 };
 #endif
