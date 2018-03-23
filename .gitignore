@@ -1,1 +1,10 @@
 .project
+object/
+idl/CTSArrayContolSystem.idl
+lib/CTSArrayContolSystem.jar
+lib/CTSArrayContolSystemImpl.jar
+lib/python/site-packages/CTSArrayContolSystem_idl.py
+*.a
+*.so
+
+
