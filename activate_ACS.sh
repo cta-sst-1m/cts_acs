@@ -1,7 +1,7 @@
 export ACS_INSTANCE=4
 export ACS_CDB=$PWD/test
 
-export JAVA_HOME=/usr/java/jdk1.8.0_45/
+export JAVA_HOME=/usr/java/default/
 LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$JAVA_HOME/lib/amd64/:$JAVA_HOME/lib/amd64/jli/
 
 PREFERED_ACS_VERSION="ACS-2016.2"
