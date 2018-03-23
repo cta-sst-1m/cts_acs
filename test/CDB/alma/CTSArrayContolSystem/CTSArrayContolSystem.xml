@@ -12,7 +12,7 @@
     xmlns:baci="urn:schemas-cosylab-com:BACI:1.0" 
     xmlns:cdb="urn:schemas-cosylab-com:CDB:1.0"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    opc_uri="opc.tcp://127.0.0.1:4843/cameraslowcontrol/server/"
+    opc_uri="opc.tcp://129.194.51.113:4843/cameraslowcontrol/server/"
     opcuaTime_var="ns=1;s=CTS.time"
     board0_AC_DCDC_var="s=CTS.DC.Board0.AC_DCDC"
     board0_DC_DCDC_var="s=CTS.DC.Board0.DC_DCDC"
