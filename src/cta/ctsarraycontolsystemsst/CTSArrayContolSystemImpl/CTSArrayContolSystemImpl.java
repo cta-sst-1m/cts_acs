@@ -145,19 +145,19 @@ public class CTSArrayContolSystemImpl extends CharacteristicComponentImpl implem
 	}
 	@Override
 	public ROlong board0_AC_DCDC() {
-		return (ROlong)getProperty(KEY_BOARD0_AC_DCDC);
+		return (ROlong) getProperty(KEY_BOARD0_AC_DCDC);
 	}
 	@Override
 	public ROlong board0_DC_DCDC() {
-		return (ROlong)getProperty(KEY_BOARD0_DC_DCDC);
+		return (ROlong) getProperty(KEY_BOARD0_DC_DCDC);
 	}
 	@Override
 	public ROlongLong board0_DC_DAC() {
-		return (ROlongLong)getProperty(KEY_BOARD0_DC_DAC);
+		return (ROlongLong) getProperty(KEY_BOARD0_DC_DAC);
 	}
 	@Override
 	public ROlongLong patch1_AC_DAC() {
-		return (ROlongLong)getProperty(KEY_PATCH1_AC_DAC);
+		return (ROlongLong) getProperty(KEY_PATCH1_AC_DAC);
 	}
     // overide functions to call OPCUA functions
 	@Override
