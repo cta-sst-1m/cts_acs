@@ -138,6 +138,7 @@ public class CTSArrayContolSystemImpl extends CharacteristicComponentImpl implem
 			return;
 		}
 	}
+
     // Overide functions to get properties.
 	@Override
 	public ROlongLong opcuaTime() {
@@ -159,17 +160,8 @@ public class CTSArrayContolSystemImpl extends CharacteristicComponentImpl implem
 	public ROlongLong patch1_AC_DAC() {
 		return (ROlongLong) getProperty(KEY_PATCH1_AC_DAC);
 	}
+
     // overide functions to call OPCUA functions
-	@Override
-	public int DCDC_ON() {
-		return execUAMethod(METHODS_CTS, "DCDC_ON", new Object[] {});
-	}
-
-	@Override
-	public int DCDC_OFF() {
-		return execUAMethod(METHODS_CTS, "DCDC_OFF", new Object[] {});
-	}
-
 	@Override
 	public int set_ac_level(int inPatch, int inLevel) {
 		return execUAMethod(METHODS_CTS, "set_ac_level", new Object[] {inPatch, inLevel});
