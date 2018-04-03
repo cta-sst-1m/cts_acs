@@ -12,7 +12,7 @@
 
   <xs:complexType name="CTSArrayContolSystemType">
     <xs:sequence>
-      <xs:element name="opcuaTime" type="baci:ROlong"/>
+      <xs:element name="opcuaTime" type="baci:ROlongLong"/>
       <xs:element name="board0_AC_DCDC" type="baci:ROlong"/>
       <xs:element name="board0_DC_DCDC" type="baci:ROlong"/>
       <xs:element name="board0_DC_DAC" type="baci:ROlongLong"/>

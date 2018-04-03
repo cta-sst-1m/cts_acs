@@ -21,6 +21,7 @@ import org.json.simple.JSONObject;
 import alma.ACS.NoSuchCharacteristic;
 import alma.ACS.Property;
 import alma.ACS.ROboolean;
+import alma.ACS.RObooleanHelper;
 import alma.ACS.RObooleanPOATie;
 import alma.ACS.RObooleanSeq;
 import alma.ACS.RObooleanSeqOperations;
@@ -106,9 +107,8 @@ public class CTSArrayContolSystemImpl extends CharacteristicComponentImpl implem
 	protected static final String OPCUA_URI = "opc_uri";
 	protected static final String OPCUA_VAR = "_var";
 
-
 	private static final String METHODS_CTS="Methods_CTS";
-	
+
 	private static final String KEY_OPCUATIME="opcuaTime";
 	private static final String KEY_BOARD0_AC_DCDC="board0_AC_DCDC";
 	private static final String KEY_BOARD0_DC_DCDC="board0_DC_DCDC";
@@ -129,8 +129,8 @@ public class CTSArrayContolSystemImpl extends CharacteristicComponentImpl implem
 		try {
             // Creates keys for properties
 			createPropertyLong(KEY_OPCUATIME);
-			createPropertyLong(KEY_BOARD0_AC_DCDC);
-			createPropertyLong(KEY_BOARD0_DC_DCDC);
+			createPropertyBoolean(KEY_BOARD0_AC_DCDC);
+			createPropertyBoolean(KEY_BOARD0_DC_DCDC);
 			createPropertyLong(KEY_BOARD0_DC_DAC);
 			createPropertyLong(KEY_PATCH1_AC_DAC);
 		} catch (Exception e) {
@@ -144,12 +144,12 @@ public class CTSArrayContolSystemImpl extends CharacteristicComponentImpl implem
 		return (ROlongLong) getProperty(KEY_OPCUATIME);
 	}
 	@Override
-	public ROlong board0_AC_DCDC() {
-		return (ROlong) getProperty(KEY_BOARD0_AC_DCDC);
+	public ROboolean board0_AC_DCDC() {
+		return (ROboolean) getProperty(KEY_BOARD0_AC_DCDC);
 	}
 	@Override
-	public ROlong board0_DC_DCDC() {
-		return (ROlong) getProperty(KEY_BOARD0_DC_DCDC);
+	public ROboolean board0_DC_DCDC() {
+		return (ROboolean) getProperty(KEY_BOARD0_DC_DCDC);
 	}
 	@Override
 	public ROlongLong board0_DC_DAC() {
@@ -314,6 +314,11 @@ public class CTSArrayContolSystemImpl extends CharacteristicComponentImpl implem
 		return (ROfloat) addProperty(ROfloatHelper.narrow(registerProperty(impl, new ROfloatPOATie(impl))));
 	}
 	
+	protected ROboolean createPropertyBoolean(String name) throws PropertyInitializationFailed {
+		RObooleanImpl impl = new RObooleanImpl(name, this, addDataAccess(name, createDataAccess(name)));
+		return (ROboolean) addProperty(RObooleanHelper.narrow(registerProperty(impl, new RObooleanPOATie(impl))));
+	}
+
 	protected ROlong createPropertyBoolean(String name, String NodeID) throws PropertyInitializationFailed {
 		//m_logger.warning("name: " + name + ", NodeID: " + NodeID);
 		ROlongImpl impl = new ROlongImpl(name, this, addDataAccess(name, createDataAccessBoolean(name, NodeID)));
@@ -381,7 +386,7 @@ public class CTSArrayContolSystemImpl extends CharacteristicComponentImpl implem
 			return res.intValue();
 		} catch (Exception e) {
 			m_logger.warning("Error occured: " + e.getMessage());
-			return 1;
+			return 0;
 		}
 	}
 
