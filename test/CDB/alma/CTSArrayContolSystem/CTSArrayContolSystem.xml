@@ -19,7 +19,7 @@
     board0_DC_DCDC_var="s=CTS.DC.Board0.DC_DCDC"
     board0_DC_DAC_var="s=CTS.DC.Board0.DC_DAC"
     patch1_AC_DAC_var="s=CTS.AC.Patch1.AC_DAC"
-    Methods_CTS_var="ns=2;s=CTS"
+    Methods_CTS_var="s=CTS"
 >
 
     <opcuaTime description="OPC UA server Unix timestamp" units="s" min_timer_trig="1" graph_min="0" graph_max="100" min_step="1"/>

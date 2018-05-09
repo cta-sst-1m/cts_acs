@@ -176,6 +176,11 @@ public class CTSArrayContolSystemImpl extends CharacteristicComponentImpl implem
 	public int set_led_status(String inLedType, int inLed, boolean inStatus) {
 		return execUAMethod(METHODS_CTS, "set_led_status", new Object[] {inLedType, inLed, inStatus});
 	}
+
+	@Override
+	public int all_on(String inLedType, int inLevel) {
+		return execUAMethod(METHODS_CTS, "all_on", new Object[] {inLedType, inLevel});
+	}
 	
 	public double delta_ms(long in) {
 		return (((long)System.nanoTime() - in)/1e6); 
@@ -370,7 +375,7 @@ public class CTSArrayContolSystemImpl extends CharacteristicComponentImpl implem
 
 	public int execUAMethod(String name, String method, Object[] Params) {
 		try {
-			m_logger.warning("Creating method support: " + method);
+			m_logger.warning("Creating method support: " + method + " ("+ name + ", " + getPropertyCharacteristic(name.concat(OPCUA_VAR)) + ")");
 			UaMethodSupport m = new UaMethodSupport(getPropertyCharacteristic(OPCUA_URI), getPropertyCharacteristic(name.concat(OPCUA_VAR)));
 			Object[] out = m.call(getPropertyCharacteristic(name.concat(OPCUA_VAR)), method, Params);
 			Long res = (Long)out[0];
@@ -378,7 +383,7 @@ public class CTSArrayContolSystemImpl extends CharacteristicComponentImpl implem
 			return res.intValue();
 		} catch (Exception e) {
 			m_logger.warning("Error occured: " + e.getMessage());
-			return 0;
+			return 1;
 		}
 	}
 

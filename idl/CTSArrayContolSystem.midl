@@ -24,6 +24,7 @@ module ctsarraycontolsystemsst {
     long set_ac_level(in long inPatch, in long inLevel);
     long set_dc_level(in long inBoard, in long inLevel);
     long set_led_status(in string inLedType, in long inLed, in boolean inStatus);
+    long all_on(in string inLedType, in long inLevel);
     /**
     * CTS variables
     **/
