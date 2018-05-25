@@ -25,12 +25,15 @@ module ctsarraycontolsystemsst {
     long set_dc_level(in long inBoard, in long inLevel);
     long set_led_status(in string inLedType, in long inLed, in boolean inStatus);
     long all_on(in string inLedType, in long inLevel);
+    long set_DAC_all_DC(in long inLevelDC);
+    long set_DAC_all(in long level_AC, in long level_DC);
+    long switch_all(in boolean inStatus);
     /**
     * CTS variables
     **/
     readonly attribute ACS::ROlongLong opcuaTime;
-    readonly attribute ACS::ROboolean board0_AC_DCDC;
-    readonly attribute ACS::ROboolean board0_DC_DCDC;
+    readonly attribute ACS::ROlongLong board0_AC_DCDC;
+    readonly attribute ACS::ROlongLong board0_DC_DCDC;
     readonly attribute ACS::ROlongLong board0_DC_DAC;
     readonly attribute ACS::ROlongLong patch1_AC_DAC;
   };

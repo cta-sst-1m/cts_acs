@@ -8,7 +8,7 @@
        xmlns:baci="urn:schemas-cosylab-com:BACI:1.0" 
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       
-       <_ Name="CTSArrayContolSystem" 
+       <_ Name="CTSArrayControlSystem" 
           Code="cta.ctsarraycontolsystemsst.CTSArrayContolSystemImpl.CTSArrayContolSystemComponentHelper" 
           Type="IDL:cta/ctsarraycontolsystemsst/CTSArrayContolSystem:1.0" 
           Container="ctsContainer" 

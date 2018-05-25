@@ -129,8 +129,8 @@ public class CTSArrayContolSystemImpl extends CharacteristicComponentImpl implem
 		try {
             // Creates keys for properties
 			createPropertyLong(KEY_OPCUATIME);
-			createPropertyBoolean(KEY_BOARD0_AC_DCDC);
-			createPropertyBoolean(KEY_BOARD0_DC_DCDC);
+			createPropertyLong(KEY_BOARD0_AC_DCDC);
+			createPropertyLong(KEY_BOARD0_DC_DCDC);
 			createPropertyLong(KEY_BOARD0_DC_DAC);
 			createPropertyLong(KEY_PATCH1_AC_DAC);
 		} catch (Exception e) {
@@ -145,12 +145,12 @@ public class CTSArrayContolSystemImpl extends CharacteristicComponentImpl implem
 		return (ROlongLong) getProperty(KEY_OPCUATIME);
 	}
 	@Override
-	public ROboolean board0_AC_DCDC() {
-		return (ROboolean) getProperty(KEY_BOARD0_AC_DCDC);
+	public ROlongLong board0_AC_DCDC() {
+		return (ROlongLong) getProperty(KEY_BOARD0_AC_DCDC);
 	}
 	@Override
-	public ROboolean board0_DC_DCDC() {
-		return (ROboolean) getProperty(KEY_BOARD0_DC_DCDC);
+	public ROlongLong board0_DC_DCDC() {
+		return (ROlongLong) getProperty(KEY_BOARD0_DC_DCDC);
 	}
 	@Override
 	public ROlongLong board0_DC_DAC() {
@@ -180,6 +180,21 @@ public class CTSArrayContolSystemImpl extends CharacteristicComponentImpl implem
 	@Override
 	public int all_on(String inLedType, int inLevel) {
 		return execUAMethod(METHODS_CTS, "all_on", new Object[] {inLedType, inLevel});
+	}
+	
+	@Override
+	public int set_DAC_all_DC(int inLevelDC) {
+		return execUAMethod(METHODS_CTS, "set_DAC_all_DC", new Object[] {inLevelDC});
+	}
+	
+	@Override
+	public int set_DAC_all(int inLevelAC, int inLevelDC) {
+		return execUAMethod(METHODS_CTS, "set_DAC_all", new Object[] {inLevelAC, inLevelDC});
+	}
+	
+	@Override
+	public int switch_all(boolean inStatus) {
+		return execUAMethod(METHODS_CTS, "switch_all", new Object[] {inStatus});
 	}
 	
 	public double delta_ms(long in) {
