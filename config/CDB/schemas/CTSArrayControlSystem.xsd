@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<xs:schema xmlns="urn:schemas-cosylab-com:CTSArrayContolSystem:1.0"
+<xs:schema xmlns="urn:schemas-cosylab-com:CTSArrayControlSystem:1.0"
     xmlns:baci="urn:schemas-cosylab-com:BACI:1.0"
     xmlns:cdb="urn:schemas-cosylab-com:CDB:1.0"
     xmlns:xs="http://www.w3.org/2001/XMLSchema"
     attributeFormDefault="unqualified"
 	elementFormDefault="qualified"
-    targetNamespace="urn:schemas-cosylab-com:CTSArrayContolSystem:1.0"
+    targetNamespace="urn:schemas-cosylab-com:CTSArrayControlSystem:1.0"
 >
   <xs:import namespace="urn:schemas-cosylab-com:CDB:1.0" schemaLocation="CDB.xsd"/>
   <xs:import namespace="urn:schemas-cosylab-com:BACI:1.0" schemaLocation="BACI.xsd"/>
 
-  <xs:complexType name="CTSArrayContolSystemType">
+  <xs:complexType name="CTSArrayControlSystemType">
     <xs:sequence>
       <xs:element name="opcuaTime" type="baci:ROlong"/>
       <xs:element name="patches_AC_DAC" type="baci:ROlongLong"/>
@@ -50,5 +50,5 @@
     <xs:attribute name="halfBoards_to_patches_var" type="xs:string" use="optional"/>
     <xs:attribute name="Methods_CTS_var" type="xs:string" use="optional"/>
   </xs:complexType>
-  <xs:element name="CTSArrayContolSystem" type="CTSArrayContolSystemType"/>
+  <xs:element name="CTSArrayControlSystem" type="CTSArrayControlSystemType"/>
 </xs:schema>

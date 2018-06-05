@@ -6,6 +6,6 @@
         corbaRepositoryId="IDL:alma/ACS/CharacteristicComponent:1.0"
         idlPackage="alma.ACS" componentClassName="CharacteristicComponent"/>
     <ComponentInterface
-        corbaRepositoryId="IDL:cta/ctsarraycontolsystemsst/CTSArrayContolSystem:1.0"
-        idlPackage="cta.ctsarraycontolsystemsst" componentClassName="CTSArrayContolSystem"/>
+        corbaRepositoryId="IDL:cta/ctsarraycontrolsystemsst/CTSArrayControlSystem:1.0"
+        idlPackage="cta.ctsarraycontrolsystemsst" componentClassName="CTSArrayControlSystem"/>
 </ComponentHelperInfo>

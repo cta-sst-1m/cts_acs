@@ -1,4 +1,4 @@
-package cta.ctsarraycontolsystemsst.CTSArrayContolSystemImpl;
+package cta.ctsarraycontrolsystemsst.CTSArrayControlSystemImpl;
 
 import alma.ACSErr.CompletionHolder;
 import alma.acs.exceptions.AcsJException;

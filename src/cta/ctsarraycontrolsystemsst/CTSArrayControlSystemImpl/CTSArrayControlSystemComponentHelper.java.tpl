@@ -20,7 +20,7 @@
  *    MA 02111-1307  USA
  */
 
-package cta.ctsarraycontolsystemsst.CTSArrayContolSystemImpl;
+package cta.ctsarraycontrolsystemsst.CTSArrayControlSystemImpl;
 
 import java.util.logging.Logger;
 
@@ -28,9 +28,9 @@ import org.omg.PortableServer.Servant;
 import alma.ACS.ACSComponentOperations;
 import alma.acs.component.ComponentLifecycle;
 import alma.acs.container.ComponentHelper;
-import cta.ctsarraycontolsystemsst.CTSArrayContolSystemOperations;
-import cta.ctsarraycontolsystemsst.CTSArrayContolSystemPOATie;
-import cta.ctsarraycontolsystemsst.CTSArrayContolSystemImpl.CTSArrayContolSystemImpl;
+import cta.ctsarraycontrolsystemsst.CTSArrayControlSystemOperations;
+import cta.ctsarraycontrolsystemsst.CTSArrayControlSystemPOATie;
+import cta.ctsarraycontrolsystemsst.CTSArrayControlSystemImpl.CTSArrayControlSystemImpl;
 
 /**
  * Component helper class. 
@@ -41,17 +41,17 @@ import cta.ctsarraycontolsystemsst.CTSArrayContolSystemImpl.CTSArrayContolSystem
  * copy the line below into a new entry in the file $ACS_CDB/MACI/Components/Components.xml 
  * and modify the instance name of the component and the container: 
  * <p>
- * Name="CTSARRAYCONTOLSYSTEM_1" Code="cta.ctsarraycontolsystemsst.CTSArrayContolSystemImpl.CTSArrayContolSystemComponentHelper" Type="IDL:cta/ctsarraycontolsystemsst/CTSArrayContolSystem:1.0" Container="frodoContainer" ImplLang="java"
+ * Name="CTSARRAYCONTROLSYSTEM_1" Code="cta.ctsarraycontrolsystemsst.CTSArrayControlSystemImpl.CTSArrayControlSystemComponentHelper" Type="IDL:cta/ctsarraycontrolsystemsst/CTSArrayControlSystem:1.0" Container="frodoContainer" ImplLang="java"
  * <p>
  * @author alma-component-helper-generator-tool
  */
-public class CTSArrayContolSystemComponentHelper extends ComponentHelper
+public class CTSArrayControlSystemComponentHelper extends ComponentHelper
 {
 	/**
 	 * Constructor
 	 * @param containerLogger logger used only by the parent class.
 	 */
-	public CTSArrayContolSystemComponentHelper(Logger containerLogger)
+	public CTSArrayControlSystemComponentHelper(Logger containerLogger)
 	{
 		super(containerLogger);
 	}
@@ -61,7 +61,7 @@ public class CTSArrayContolSystemComponentHelper extends ComponentHelper
 	*/
 	protected ComponentLifecycle _createComponentImpl()
 	{
-		return new CTSArrayContolSystemImpl();
+		return new CTSArrayControlSystemImpl();
 	}
 
 	/**
@@ -69,7 +69,7 @@ public class CTSArrayContolSystemComponentHelper extends ComponentHelper
 	*/
 	protected Class<? extends Servant> _getPOATieClass()
 	{
-		return CTSArrayContolSystemPOATie.class;
+		return CTSArrayControlSystemPOATie.class;
 	}
 
 	/**
@@ -77,7 +77,7 @@ public class CTSArrayContolSystemComponentHelper extends ComponentHelper
 	*/
 	protected Class<? extends ACSComponentOperations> _getOperationsInterface()
 	{
-		return CTSArrayContolSystemOperations.class;
+		return CTSArrayControlSystemOperations.class;
 	}
 
 }

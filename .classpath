@@ -4,8 +4,8 @@
 	<classpathentry kind="lib" path="lib"/>
 	<classpathentry kind="src" path="src"/>
 
-	<classpathentry kind="lib" path="lib/CTSArrayContolSystem.jar"/>
-	<classpathentry kind="lib" path="lib/CTSArrayContolSystemImpl.jar"/>
+	<classpathentry kind="lib" path="lib/CTSArrayControlSystem.jar"/>
+	<classpathentry kind="lib" path="lib/CTSArrayControlSystemImpl.jar"/>
 	<classpathentry kind="lib" path="lib/commons-lang3-3.4.jar"/>
 
 	<classpathentry kind="lib" path="/alma/ACS/ACSSW/lib/acsContainerServices.jar"/>

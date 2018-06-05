@@ -26,19 +26,19 @@ ACSERRDEF =
 
 COMPONENT_HELPERS=on
 
-JARFILES = CTSArrayContolSystemImpl
-CTSArrayContolSystemImpl_DIRS   = cta
-CTSArrayContolSystemImpl_EXTRAS =
+JARFILES = CTSArrayControlSystemImpl
+CTSArrayControlSystemImpl_DIRS   = cta
+CTSArrayControlSystemImpl_EXTRAS =
 
 #
 # Configuration database schema Files
 # ------------------------------------
-CDB_SCHEMAS = CTSArrayContolSystem
+CDB_SCHEMAS = CTSArrayControlSystem
 
 #
 # IDL FILES
 #----------------------------
-IDL_FILES = CTSArrayContolSystem
+IDL_FILES = CTSArrayControlSystem
 USER_IDL = 
 
 #

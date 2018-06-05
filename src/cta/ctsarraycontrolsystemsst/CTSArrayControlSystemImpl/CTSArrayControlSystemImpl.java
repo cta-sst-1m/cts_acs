@@ -5,7 +5,7 @@
  * @author yrenier, unige
  * based on MST WeatherStation ACS Component
  */
-package cta.ctsarraycontolsystemsst.CTSArrayContolSystemImpl;
+package cta.ctsarraycontrolsystemsst.CTSArrayControlSystemImpl;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -44,9 +44,6 @@ import alma.ACS.ROlongPOATie;
 import alma.ACS.ROlongSeq;
 import alma.ACS.ROlongSeqHelper;
 import alma.ACS.ROlongSeqPOATie;
-import alma.ACS.ROlongLongSeq;
-import alma.ACS.ROlongLongSeqHelper;
-import alma.ACS.ROlongLongSeqPOATie;
 import alma.ACS.ROstring;
 import alma.ACS.ROstringHelper;
 import alma.ACS.ROstringPOATie;
@@ -60,7 +57,6 @@ import alma.ACS.impl.ROdoubleSeqImpl;
 import alma.ACS.impl.ROfloatImpl;
 import alma.ACS.impl.ROlongImpl;
 import alma.ACS.impl.ROlongLongImpl;
-import alma.ACS.impl.ROlongLongSeqImpl;
 import alma.ACS.impl.ROlongSeqImpl;
 import alma.ACS.impl.ROstringImpl;
 import alma.ACS.impl.ROstringSeqImpl;
@@ -81,9 +77,9 @@ import cta.acs.opcua.da.extension.UaDataSupportFloats;
 import cta.acs.opcua.da.extension.UaDataSupportLongs;
 import cta.acs.opcua.da.extension.UaDataSupportUInt16;
 import cta.acs.opcua.da.extension.UaDataSupportUInt64;
-import cta.ctsarraycontolsystemsst.CTSArrayContolSystemOperations;
+import cta.ctsarraycontrolsystemsst.CTSArrayControlSystemOperations;
 
-import cta.ctsarraycontolsystemsst.CTSArrayContolSystemImpl.UaDataSupportIntegers;
+import cta.ctsarraycontrolsystemsst.CTSArrayControlSystemImpl.UaDataSupportIntegers;
 
 /**
  * Implementation of the Camera Test Setup interface with OPC UA client
@@ -99,10 +95,10 @@ import cta.ctsarraycontolsystemsst.CTSArrayContolSystemImpl.UaDataSupportInteger
  * @version $Revision: 001 $ : $LastChangedDate: 2015-12-13 12:51:23 +0200 (Sun,
  *          13 Dec 2015) $
  */
-public class CTSArrayContolSystemImpl extends CharacteristicComponentImpl implements CTSArrayContolSystemOperations {
+public class CTSArrayControlSystemImpl extends CharacteristicComponentImpl implements CTSArrayControlSystemOperations {
 	//protected Logger logger;
 
-	public CTSArrayContolSystemImpl() {
+	public CTSArrayControlSystemImpl() {
 		super();
 		//this.logger = LogManager.getLogger(this.getClass());
 	}
@@ -169,20 +165,20 @@ public class CTSArrayContolSystemImpl extends CharacteristicComponentImpl implem
 		return (ROlongLong) getProperty(KEY_OPCUATIME);
 	}
 	@Override
-	public ROlongLongSeq patches_AC_DAC() {
-		return (ROlongLongSeq) getProperty(KEY_PATCHES_AC_DAC);
+	public ROlongSeq patches_AC_DAC() {
+		return (ROlongSeq) getProperty(KEY_PATCHES_AC_DAC);
 	}
     @Override
-	public ROlongLongSeq boards_DC_DAC() {
-		return (ROlongLongSeq) getProperty(KEY_BOARDS_DC_DAC);
+	public ROlongSeq boards_DC_DAC() {
+		return (ROlongSeq) getProperty(KEY_BOARDS_DC_DAC);
 	}
     @Override
-	public ROlongLongSeq patches_AC_offset() {
-		return (ROlongLongSeq) getProperty(KEY_PATCHES_AC_OFFSET);
+	public ROlongSeq patches_AC_offset() {
+		return (ROlongSeq) getProperty(KEY_PATCHES_AC_OFFSET);
 	}
     @Override
-	public ROlongLongSeq boards_DC_offset() {
-		return (ROlongLongSeq) getProperty(KEY_BOARDS_DC_OFFSET);
+	public ROlongSeq boards_DC_offset() {
+		return (ROlongSeq) getProperty(KEY_BOARDS_DC_OFFSET);
 	}
     @Override
 	public ROlongSeq pixels_AC_status() {
@@ -193,136 +189,155 @@ public class CTSArrayContolSystemImpl extends CharacteristicComponentImpl implem
 		return (ROlongSeq) getProperty(KEY_PIXELS_DC_STATUS);
 	}
     @Override
-	public ROlongLongSeq pixels_to_patches() {
-		return (ROlongLongSeq) getProperty(KEY_PIXELS_TO_PATCHES);
+	public ROlongSeq pixels_to_patches() {
+		return (ROlongSeq) getProperty(KEY_PIXELS_TO_PATCHES);
 	}
     @Override
-	public ROlongLongSeq patches_to_pixels() {
-		return (ROlongLongSeq) getProperty(KEY_PATCHES_TO_PIXELS);
+	public ROlongSeq patches_to_pixels() {
+		return (ROlongSeq) getProperty(KEY_PATCHES_TO_PIXELS);
 	}
     @Override
-	public ROlongLongSeq pixels_to_halfBoards() {
-		return (ROlongLongSeq) getProperty(KEY_PIXELS_TO_HALFBOARDS);
+	public ROlongSeq pixels_to_halfBoards() {
+		return (ROlongSeq) getProperty(KEY_PIXELS_TO_HALFBOARDS);
 	}
     @Override
-	public ROlongLongSeq halfBoards_to_pixels() {
-		return (ROlongLongSeq) getProperty(KEY_HALFBOARDS_TO_PIXELS);
+	public ROlongSeq halfBoards_to_pixels() {
+		return (ROlongSeq) getProperty(KEY_HALFBOARDS_TO_PIXELS);
 	}
     @Override
-	public ROlongLongSeq pixels_to_boards() {
-		return (ROlongLongSeq) getProperty(KEY_PIXELS_TO_BOARDS);
+	public ROlongSeq pixels_to_boards() {
+		return (ROlongSeq) getProperty(KEY_PIXELS_TO_BOARDS);
 	}
     @Override
-	public ROlongLongSeq boards_to_pixels() {
-		return (ROlongLongSeq) getProperty(KEY_BOARDS_TO_PIXELS);
+	public ROlongSeq boards_to_pixels() {
+		return (ROlongSeq) getProperty(KEY_BOARDS_TO_PIXELS);
 	}
     @Override
-	public ROlongLongSeq patches_to_halfBoards() {
-		return (ROlongLongSeq) getProperty(KEY_PATCHES_TO_HALFBOARDS);
+	public ROlongSeq patches_to_halfBoards() {
+		return (ROlongSeq) getProperty(KEY_PATCHES_TO_HALFBOARDS);
 	}
     @Override
-	public ROlongLongSeq halfBoards_to_patches() {
-		return (ROlongLongSeq) getProperty(KEY_HALFBOARDS_TO_PATCHES);
+	public ROlongSeq halfBoards_to_patches() {
+		return (ROlongSeq) getProperty(KEY_HALFBOARDS_TO_PATCHES);
 	}
     // overide functions to call OPCUA functions
-    public int set_board_DC_DAC(in long inBoard, in long inLevel) {
+    @Override
+    public int set_board_DC_DAC(int inBoard, int inLevel) {
 		return execUAMethod(
 		    METHODS_CTS, "set_board_DC_DAC", new Object[] {inBoard, inLevel}
 		);
 	}
-    public int set_patch_AC_DAC(in long inPatch, in long inLevel) {
+    @Override
+    public int set_patch_AC_DAC(int inPatch, int inLevel) {
 		return execUAMethod(
 		    METHODS_CTS, "set_patch_AC_DAC", new Object[] {inPatch, inLevel}
 		);
 	}
-    public int set_board_DC_offset(in long inBoard, in long inOffset) {
+    @Override
+    public int set_board_DC_offset(int inBoard, int inOffset) {
 		return execUAMethod(
 		    METHODS_CTS, "set_board_DC_offset", new Object[] {inBoard, inOffset}
 		);
 	}
-    public int set_patch_AC_offset(in long inPatch, in long inOffset) {
+    @Override
+    public int set_patch_AC_offset(int inPatch, int inOffset) {
 		return execUAMethod(
 		    METHODS_CTS, "set_patch_AC_offset", new Object[] {inPatch, inOffset}
 		);
 	}
-	public int set_halfBoard_AC_DAC(in long inHalfBoard, in long inLevel) {
+    @Override
+	public int set_halfBoard_AC_DAC(int inHalfBoard, int inLevel) {
 		return execUAMethod(
 		    METHODS_CTS, "set_halfBoard_AC_DAC", new Object[] {inHalfBoard, inLevel}
 		);
 	}
-    public int  set_halfBoard_AC_offset(in long inHalfBoard, in long inOffset) {
+    @Override
+    public int  set_halfBoard_AC_offset(int inHalfBoard, int inOffset) {
 		return execUAMethod(
 		    METHODS_CTS, "set_halfBoard_AC_offset", new Object[] {inHalfBoard, inOffset}
 		);
 	}
-    public int set_leds_AC_in_halfBoard_status(in long inHalfBoard, in long inHalfBoardStatus) {
+    @Override
+    public int set_leds_AC_in_halfBoard_status(int inHalfBoard, int inHalfBoardStatus) {
 		return execUAMethod(
 		    METHODS_CTS, "set_leds_AC_in_halfBoard_status", new Object[] {inHalfBoard, inHalfBoardStatus}
 		);
 	}
-    public int set_leds_DC_in_halfBoard_status(in long inHalfBoard, in long inHalfBoardStatus) {
+    @Override
+    public int set_leds_DC_in_halfBoard_status(int inHalfBoard, int inHalfBoardStatus) {
 		return execUAMethod(
 		    METHODS_CTS, "set_leds_DC_in_halfBoard_status", new Object[] {inHalfBoard, inHalfBoardStatus}
 		);
 	}
     // broadcasted functions
-    public int set_all_DAC(in long inLevelDC, in long inLevelAC) {
+    @Override
+    public int set_all_DAC(int inLevelDC, int inLevelAC) {
 		return execUAMethod(
 		    METHODS_CTS, "set_all_DAC", new Object[] {inLevelDC, inLevelAC}
 		);
 	}
-    public int set_all_offset(in long inOffsetDC, in long inOffsetAC) {
+    @Override
+    public int set_all_offset(int inOffsetDC, int inOffsetAC) {
 		return execUAMethod(
 		    METHODS_CTS, "set_all_offset", new Object[] {inOffsetDC, inOffsetAC}
 		);
 	}
     // Functions with arrays
-    public int set_patches_AC_DAC(in string inPatchesLevel) {
+    @Override
+    public int set_patches_AC_DAC(String inPatchesLevel) {
 		return execUAMethod(
 		    METHODS_CTS, "set_patches_AC_DAC", new Object[] {inPatchesLevel}
 		);
 	}
-    public int set_boards_DC_DAC(in string inBoardsLevel) {
+    @Override
+    public int set_boards_DC_DAC(String inBoardsLevel) {
 		return execUAMethod(
 		    METHODS_CTS, "set_boards_DC_DAC", new Object[] {inBoardsLevel}
 		);
 	}
-    public int set_patches_AC_offset(in string inPatchesOffset) {
+    @Override
+    public int set_patches_AC_offset(String inPatchesOffset) {
 		return execUAMethod(
 		    METHODS_CTS, "set_patches_AC_offset", new Object[] {inPatchesOffset}
 		);
 	}
-    public int set_boards_DC_offset(in string inBoardsOffset) {
+    @Override
+    public int set_boards_DC_offset(String inBoardsOffset) {
 		return execUAMethod(
 		    METHODS_CTS, "set_boards_DC_offset", new Object[] {inBoardsOffset}
 		);
 	}
-    public int set_pixels_DC_status(in string inPixelsSatuts) {
+    @Override
+    public int set_pixels_DC_status(String inPixelsSatuts) {
 		return execUAMethod(
 		    METHODS_CTS, "set_pixels_dc_status", new Object[] {inPixelsSatuts}
 		);
 	}
-    public int set_pixels_AC_status(in string inPixelsSatuts) {
+    @Override
+    public int set_pixels_AC_status(String inPixelsSatuts) {
 		return execUAMethod(
 		    METHODS_CTS, "set_pixels_ac_status", new Object[] {inPixelsSatuts}
 		);
 	}
-    public int set_pixels_AC_DAC(in string inPixelsLevel) {
+    @Override
+    public int set_pixels_AC_DAC(String inPixelsLevel) {
 		return execUAMethod(
 		    METHODS_CTS, "set_pixels_ac_DAC", new Object[] {inPixelsLevel}
 		);
 	}
-    public int set_pixels_DC_DAC(in string inPixelsLevel) {
+    @Override
+    public int set_pixels_DC_DAC(String inPixelsLevel) {
 		return execUAMethod(
 		    METHODS_CTS, "set_pixels_dc_DAC", new Object[] {inPixelsLevel}
 		);
 	}
-    public int set_pixels_AC_offset(in string inPixelsOffset) {
+    @Override
+    public int set_pixels_AC_offset(String inPixelsOffset) {
 		return execUAMethod(
 		    METHODS_CTS, "set_pixels_ac_offset", new Object[] {inPixelsOffset}
 		);
 	}
-    public int set_pixels_DC_offset(in string inPixelsOffset) {
+    public int set_pixels_DC_offset(String inPixelsOffset) {
 		return execUAMethod(
 		    METHODS_CTS, "set_pixels_dc_offset", new Object[] {inPixelsOffset}
 		);
@@ -453,9 +468,9 @@ public class CTSArrayContolSystemImpl extends CharacteristicComponentImpl implem
 	}
 
 // Added by Yves on 04/06/2018
-	protected ROlongLongSeq createPropertyLongs(String name) throws PropertyInitializationFailed {
-		ROlongLongSeqImpl impl = new ROlongLongSeqImpl(name, this, addDataAccess(name, createDataAccess(name)));
-		return (ROlongLongSeq) addProperty(ROlongLongSeqHelper.narrow(registerProperty(impl, new ROlongLongSeqPOATie(impl))));
+	protected ROlongSeq createPropertyLongs(String name) throws PropertyInitializationFailed {
+		ROlongSeqImpl impl = new ROlongSeqImpl(name, this, addDataAccess(name, createDataAccess(name)));
+		return (ROlongSeq) addProperty(ROlongSeqHelper.narrow(registerProperty(impl, new ROlongSeqPOATie(impl))));
 	}
 // Added by Yves on 04/06/2018
 	protected ROlongSeq createPropertyBooleans(String name) throws PropertyInitializationFailed {

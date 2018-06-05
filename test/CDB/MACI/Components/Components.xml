@@ -8,9 +8,9 @@
        xmlns:baci="urn:schemas-cosylab-com:BACI:1.0" 
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       
-       <_ Name="CTSArrayContolSystem" 
-          Code="cta.ctsarraycontolsystemsst.CTSArrayContolSystemImpl.CTSArrayContolSystemComponentHelper" 
-          Type="IDL:cta/ctsarraycontolsystemsst/CTSArrayContolSystem:1.0" 
+       <_ Name="CTSArrayControlSystem" 
+          Code="cta.ctsarraycontrolsystemsst.CTSArrayControlSystemImpl.CTSArrayControlSystemComponentHelper" 
+          Type="IDL:cta/ctsarraycontrolsystemsst/CTSArrayControlSystem:1.0" 
           Container="ctsContainer" 
           ImplLang="java" />
 

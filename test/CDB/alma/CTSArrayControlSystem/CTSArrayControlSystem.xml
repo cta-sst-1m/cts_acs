@@ -7,8 +7,8 @@
    - History:
    -	2018-03-15: created
   -->
-<CTSArrayContolSystem 
-    xmlns="urn:schemas-cosylab-com:CTSArrayContolSystem:1.0"
+<CTSArrayControlSystem 
+    xmlns="urn:schemas-cosylab-com:CTSArrayControlSystem:1.0"
     xmlns:baci="urn:schemas-cosylab-com:BACI:1.0" 
     xmlns:cdb="urn:schemas-cosylab-com:CDB:1.0"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -49,4 +49,4 @@
     <boards_to_pixels description="pixels for each LED board" units="none" min_timer_trig="1" graph_min="0" graph_max="1295" min_step="1"/>
     <patches_to_halfBoards description="LED half board for each LED patch" units="none" min_timer_trig="1" graph_min="53" graph_max="100" min_step="1"/>
     <halfBoards_to_patches description="LED patches for each half board" units="none" min_timer_trig="1" graph_min="431" graph_max="100" min_step="1"/>
-</CTSArrayContolSystem>
+</CTSArrayControlSystem>
