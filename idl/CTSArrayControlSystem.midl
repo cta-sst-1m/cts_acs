@@ -49,21 +49,21 @@ module ctsarraycontrolsystemsst {
     **/
     readonly attribute ACS::ROlongLong opcuaTime;
     //Properties describing CTS status
-    readonly attribute ACS::ROdoubleSeq patches_AC_DAC;
-    readonly attribute ACS::ROdoubleSeq boards_DC_DAC;
-    readonly attribute ACS::ROdoubleSeq patches_AC_offset;
-    readonly attribute ACS::ROdoubleSeq boards_DC_offset;
+    readonly attribute ACS::ROlongSeq patches_AC_DAC;
+    readonly attribute ACS::ROlongSeq boards_DC_DAC;
+    readonly attribute ACS::ROlongSeq patches_AC_offset;
+    readonly attribute ACS::ROlongSeq boards_DC_offset;
     readonly attribute ACS::ROlongSeq pixels_AC_status;
     readonly attribute ACS::ROlongSeq pixels_DC_status;
     //Properties describing mapping
-    readonly attribute ACS::ROdoubleSeq pixels_to_patches;
-    readonly attribute ACS::ROdoubleSeq patches_to_pixels;
-    readonly attribute ACS::ROdoubleSeq pixels_to_halfBoards;
-    readonly attribute ACS::ROdoubleSeq halfBoards_to_pixels;
-    readonly attribute ACS::ROdoubleSeq pixels_to_boards;
-    readonly attribute ACS::ROdoubleSeq boards_to_pixels;
-    readonly attribute ACS::ROdoubleSeq patches_to_halfBoards;
-    readonly attribute ACS::ROdoubleSeq halfBoards_to_patches;
+    readonly attribute ACS::ROlongSeq pixels_to_patches;
+    readonly attribute ACS::ROlongSeq patches_to_pixels;
+    readonly attribute ACS::ROlongSeq pixels_to_halfBoards;
+    readonly attribute ACS::ROlongSeq halfBoards_to_pixels;
+    readonly attribute ACS::ROlongSeq pixels_to_boards;
+    readonly attribute ACS::ROlongSeq boards_to_pixels;
+    readonly attribute ACS::ROlongSeq patches_to_halfBoards;
+    readonly attribute ACS::ROlongSeq halfBoards_to_patches;
   };
 };
 #endif

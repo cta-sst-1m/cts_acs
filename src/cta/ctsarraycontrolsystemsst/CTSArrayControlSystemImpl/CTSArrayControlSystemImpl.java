@@ -140,20 +140,20 @@ public class CTSArrayControlSystemImpl extends CharacteristicComponentImpl imple
 		try {
             // Creates keys for properties
 			createPropertyLong(KEY_OPCUATIME);
-			createPropertyDoubles(KEY_PATCHES_AC_DAC);
-            createPropertyDoubles(KEY_BOARDS_DC_DAC);
-            createPropertyDoubles(KEY_PATCHES_AC_OFFSET);
-            createPropertyDoubles(KEY_BOARDS_DC_OFFSET);
-            createPropertyBooleans(KEY_PIXELS_AC_STATUS);
-            createPropertyBooleans(KEY_PIXELS_DC_STATUS);
-            createPropertyDoubles(KEY_PIXELS_TO_PATCHES);
-            createPropertyDoubles(KEY_PATCHES_TO_PIXELS);
-            createPropertyDoubles(KEY_PIXELS_TO_HALFBOARDS);
-            createPropertyDoubles(KEY_HALFBOARDS_TO_PIXELS);
-            createPropertyDoubles(KEY_PIXELS_TO_BOARDS);
-            createPropertyDoubles(KEY_BOARDS_TO_PIXELS);
-            createPropertyDoubles(KEY_PATCHES_TO_HALFBOARDS);
-            createPropertyDoubles(KEY_HALFBOARDS_TO_PATCHES);
+			createPropertyIntegers(KEY_PATCHES_AC_DAC, KEY_PATCHES_AC_DAC, getPropertyCharacteristic(KEY_PATCHES_AC_DAC + OPCUA_VAR));
+            createPropertyIntegers(KEY_BOARDS_DC_DAC, KEY_BOARDS_DC_DAC, getPropertyCharacteristic(KEY_BOARDS_DC_DAC + OPCUA_VAR));
+            createPropertyIntegers(KEY_PATCHES_AC_OFFSET, KEY_PATCHES_AC_OFFSET, getPropertyCharacteristic(KEY_PATCHES_AC_OFFSET + OPCUA_VAR));
+            createPropertyIntegers(KEY_BOARDS_DC_OFFSET, KEY_BOARDS_DC_OFFSET, getPropertyCharacteristic(KEY_BOARDS_DC_OFFSET + OPCUA_VAR));
+            createPropertyBooleans(KEY_PIXELS_AC_STATUS, KEY_PIXELS_AC_STATUS, getPropertyCharacteristic(KEY_PIXELS_AC_STATUS + OPCUA_VAR));
+            createPropertyBooleans(KEY_PIXELS_DC_STATUS, KEY_PIXELS_DC_STATUS, getPropertyCharacteristic(KEY_PIXELS_DC_STATUS + OPCUA_VAR));
+            createPropertyIntegers(KEY_PIXELS_TO_PATCHES, KEY_PIXELS_TO_PATCHES, getPropertyCharacteristic(KEY_PIXELS_TO_PATCHES + OPCUA_VAR));
+            createPropertyIntegers(KEY_PATCHES_TO_PIXELS, KEY_PATCHES_TO_PIXELS, getPropertyCharacteristic(KEY_PATCHES_TO_PIXELS + OPCUA_VAR));
+            createPropertyIntegers(KEY_PIXELS_TO_HALFBOARDS, KEY_PIXELS_TO_HALFBOARDS, getPropertyCharacteristic(KEY_PIXELS_TO_HALFBOARDS + OPCUA_VAR));
+            createPropertyIntegers(KEY_HALFBOARDS_TO_PIXELS, KEY_HALFBOARDS_TO_PIXELS, getPropertyCharacteristic(KEY_HALFBOARDS_TO_PIXELS + OPCUA_VAR));
+            createPropertyIntegers(KEY_PIXELS_TO_BOARDS, KEY_PIXELS_TO_BOARDS, getPropertyCharacteristic(KEY_PIXELS_TO_BOARDS + OPCUA_VAR));
+            createPropertyIntegers(KEY_BOARDS_TO_PIXELS, KEY_BOARDS_TO_PIXELS, getPropertyCharacteristic(KEY_BOARDS_TO_PIXELS + OPCUA_VAR));
+            createPropertyIntegers(KEY_PATCHES_TO_HALFBOARDS, KEY_PATCHES_TO_HALFBOARDS, getPropertyCharacteristic(KEY_PATCHES_TO_HALFBOARDS + OPCUA_VAR));
+            createPropertyIntegers(KEY_HALFBOARDS_TO_PATCHES, KEY_HALFBOARDS_TO_PATCHES, getPropertyCharacteristic(KEY_HALFBOARDS_TO_PATCHES + OPCUA_VAR));
 		} catch (Exception e) {
 			m_logger.warning("Exception occured while initializing: " + e.toString());
 			return;
@@ -165,20 +165,20 @@ public class CTSArrayControlSystemImpl extends CharacteristicComponentImpl imple
 		return (ROlongLong) getProperty(KEY_OPCUATIME);
 	}
 	@Override
-	public ROdoubleSeq patches_AC_DAC() {
-		return (ROdoubleSeq) getProperty(KEY_PATCHES_AC_DAC);
+	public ROlongSeq patches_AC_DAC() {
+		return (ROlongSeq) getProperty(KEY_PATCHES_AC_DAC);
 	}
     @Override
-	public ROdoubleSeq boards_DC_DAC() {
-		return (ROdoubleSeq) getProperty(KEY_BOARDS_DC_DAC);
+	public ROlongSeq boards_DC_DAC() {
+		return (ROlongSeq) getProperty(KEY_BOARDS_DC_DAC);
 	}
     @Override
-	public ROdoubleSeq patches_AC_offset() {
-		return (ROdoubleSeq) getProperty(KEY_PATCHES_AC_OFFSET);
+	public ROlongSeq patches_AC_offset() {
+		return (ROlongSeq) getProperty(KEY_PATCHES_AC_OFFSET);
 	}
     @Override
-	public ROdoubleSeq boards_DC_offset() {
-		return (ROdoubleSeq) getProperty(KEY_BOARDS_DC_OFFSET);
+	public ROlongSeq boards_DC_offset() {
+		return (ROlongSeq) getProperty(KEY_BOARDS_DC_OFFSET);
 	}
     @Override
 	public ROlongSeq pixels_AC_status() {
@@ -189,36 +189,36 @@ public class CTSArrayControlSystemImpl extends CharacteristicComponentImpl imple
 		return (ROlongSeq) getProperty(KEY_PIXELS_DC_STATUS);
 	}
     @Override
-	public ROdoubleSeq pixels_to_patches() {
-		return (ROdoubleSeq) getProperty(KEY_PIXELS_TO_PATCHES);
+	public ROlongSeq pixels_to_patches() {
+		return (ROlongSeq) getProperty(KEY_PIXELS_TO_PATCHES);
 	}
     @Override
-	public ROdoubleSeq patches_to_pixels() {
-		return (ROdoubleSeq) getProperty(KEY_PATCHES_TO_PIXELS);
+	public ROlongSeq patches_to_pixels() {
+		return (ROlongSeq) getProperty(KEY_PATCHES_TO_PIXELS);
 	}
     @Override
-	public ROdoubleSeq pixels_to_halfBoards() {
-		return (ROdoubleSeq) getProperty(KEY_PIXELS_TO_HALFBOARDS);
+	public ROlongSeq pixels_to_halfBoards() {
+		return (ROlongSeq) getProperty(KEY_PIXELS_TO_HALFBOARDS);
 	}
     @Override
-	public ROdoubleSeq halfBoards_to_pixels() {
-		return (ROdoubleSeq) getProperty(KEY_HALFBOARDS_TO_PIXELS);
+	public ROlongSeq halfBoards_to_pixels() {
+		return (ROlongSeq) getProperty(KEY_HALFBOARDS_TO_PIXELS);
 	}
     @Override
-	public ROdoubleSeq pixels_to_boards() {
-		return (ROdoubleSeq) getProperty(KEY_PIXELS_TO_BOARDS);
+	public ROlongSeq pixels_to_boards() {
+		return (ROlongSeq) getProperty(KEY_PIXELS_TO_BOARDS);
 	}
     @Override
-	public ROdoubleSeq boards_to_pixels() {
-		return (ROdoubleSeq) getProperty(KEY_BOARDS_TO_PIXELS);
+	public ROlongSeq boards_to_pixels() {
+		return (ROlongSeq) getProperty(KEY_BOARDS_TO_PIXELS);
 	}
     @Override
-	public ROdoubleSeq patches_to_halfBoards() {
-		return (ROdoubleSeq) getProperty(KEY_PATCHES_TO_HALFBOARDS);
+	public ROlongSeq patches_to_halfBoards() {
+		return (ROlongSeq) getProperty(KEY_PATCHES_TO_HALFBOARDS);
 	}
     @Override
-	public ROdoubleSeq halfBoards_to_patches() {
-		return (ROdoubleSeq) getProperty(KEY_HALFBOARDS_TO_PATCHES);
+	public ROlongSeq halfBoards_to_patches() {
+		return (ROlongSeq) getProperty(KEY_HALFBOARDS_TO_PATCHES);
 	}
     // overide functions to call OPCUA functions
     @Override
@@ -465,22 +465,6 @@ public class CTSArrayControlSystemImpl extends CharacteristicComponentImpl imple
 	protected ROlongLong createPropertyLong(String name) throws PropertyInitializationFailed {
 		ROlongLongImpl impl = new ROlongLongImpl(name, this, addDataAccess(name, createDataAccess(name)));
 		return (ROlongLong) addProperty(ROlongLongHelper.narrow(registerProperty(impl, new ROlongLongPOATie(impl))));
-	}
-
-// Added by Yves on 04/06/2018
-	protected ROlongSeq createPropertyLongs(String name) throws PropertyInitializationFailed {
-		ROlongSeqImpl impl = new ROlongSeqImpl(name, this, addDataAccess(name, createDataAccess(name)));
-		return (ROlongSeq) addProperty(ROlongSeqHelper.narrow(registerProperty(impl, new ROlongSeqPOATie(impl))));
-	}
-// Added by Yves on 04/06/2018
-	protected ROdoubleSeq createPropertyDoubles(String name) throws PropertyInitializationFailed {
-		ROdoubleSeqImpl impl = new ROdoubleSeqImpl(name, this, addDataAccess(name, createDataAccess(name)));
-		return (ROdoubleSeq) addProperty(ROdoubleSeqHelper.narrow(registerProperty(impl, new ROdoubleSeqPOATie(impl))));
-	}
-// Added by Yves on 04/06/2018
-	protected ROlongSeq createPropertyBooleans(String name) throws PropertyInitializationFailed {
-		ROlongSeqImpl impl = new ROlongSeqImpl(name, this, addDataAccess(name, createDataAccess(name)));
-		return (ROlongSeq) addProperty(ROlongSeqHelper.narrow(registerProperty(impl, new ROlongSeqPOATie(impl))));
 	}
 
 	protected ROfloat createPropertyFloat(String name) throws PropertyInitializationFailed {
