@@ -13,16 +13,40 @@
     xmlns:cdb="urn:schemas-cosylab-com:CDB:1.0"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     opc_uri="opc.tcp://129.194.51.113:4843/cameraslowcontrol/server/"
-    opcuaTime_var="ns=1;s=CTS.time"
-    board0_AC_DCDC_var="s=CTS.DC.Board0.AC_DCDC"
-    board0_DC_DCDC_var="s=CTS.DC.Board0.DC_DCDC"
-    board0_DC_DAC_var="s=CTS.DC.Board0.DC_DAC"
-    patch1_AC_DAC_var="s=CTS.AC.Patch1.AC_DAC"
+    opcuaTime_var="ns=2;s=CTS.time"
+
+    patches_AC_DAC_var="ns=2;s=CTS.DAC.AC.patches"
+    boards_DC_DAC_var="ns=2;s=CTS.DAC.DC.boards"
+    patches_AC_offset_var="ns=2;s=CTS.DACoffset.AC.patches"
+    boards_DC_offset_var="ns=2;s=CTS.DACoffset.DC.boards"
+    pixels_AC_status_var="ns=2;s=CTS.status.AC.pixels"
+    pixels_DC_status_var="ns=2;s=CTS.status.DC.pixels"
+
+    pixels_to_patches_var="ns=2;s=CTS.mapping.pixels_to_patches"
+    patches_to_pixels_var="ns=2;s=CTS.mapping.patches_to_pixels"
+    pixels_to_halfBoards_var="ns=2;s=CTS.mapping.pixels_to_halfBoards"
+    halfBoards_to_pixels_var="ns=2;s=CTS.mapping.halfBoards_to_pixels"
+    pixels_to_boards_var="ns=2;s=CTS.mapping.pixels_to_boards"
+    boards_to_pixels_var="ns=2;s=CTS.mapping.boards_to_pixels"
+    patches_to_halfBoards_var="ns=2;s=CTS.mapping.patches_to_halfBoards"
+    halfBoards_to_patches_var="ns=2;s=CTS.mapping.halfBoards_to_patches"
     Methods_CTS_var="ns=2;s=CTS"
 >
     <opcuaTime description="OPC UA server Unix timestamp" units="s" min_timer_trig="1" graph_min="0" graph_max="100" min_step="1"/>
-    <board0_AC_DCDC description="status of DCDC covertor for AC on board 0 (0=OFF, 1=ON)" units="none" min_timer_trig="1" graph_min="0" graph_max="100" min_step="1"/>
-    <board0_DC_DCDC description="status of DCDC covertor for DC on board 0 (0=OFF, 1=ON)" units="none" min_timer_trig="1" graph_min="0" graph_max="100" min_step="1"/>
-    <board0_DC_DAC description="DAC value for DC on board 0" units="none" min_timer_trig="1" graph_min="0" graph_max="1024" min_step="1"/>
-    <patch1_AC_DAC description="DAC value for AC on patch 1" units="none" min_timer_trig="1" graph_min="0" graph_max="1024" min_step="1"/>
+
+    <patches_AC_DAC description="ADC values for all AC patches" units="LSB" min_timer_trig="1" graph_min="0" graph_max="1023" min_step="1"/>
+    <boards_DC_DAC description="ADC values for all DC boards" units="LSB" min_timer_trig="1" graph_min="0" graph_max="1023" min_step="1"/>
+    <patches_AC_offset description="ADC offset values for all AC patches" units="LSB" min_timer_trig="1" graph_min="0" graph_max="1023" min_step="1"/>
+    <boards_DC_offset description="ADC offset values for all DC boards" units="LSB" min_timer_trig="1" graph_min="0" graph_max="1023" min_step="1"/>
+    <pixels_AC_status description="status of AC LEDs for all pixels" units="none" min_timer_trig="1" graph_min="0" graph_max="1" min_step="1"/>
+    <pixels_DC_status description="status of DC LEDs for all pixels" units="none" min_timer_trig="1" graph_min="0" graph_max="1" min_step="1"/>
+
+    <pixels_to_patches description="LED patch for each pixel" units="none" min_timer_trig="1" graph_min="0" graph_max="431" min_step="1"/>
+    <patches_to_pixels description="pixels for each LED patch" units="none" min_timer_trig="1" graph_min="0" graph_max="1295" min_step="1"/>
+    <pixels_to_halfBoards description="LED half board for each pixel" units="none" min_timer_trig="1" graph_min="0" graph_max="53" min_step="1"/>
+    <halfBoards_to_pixels description="pixels for each LED half board" units="none" min_timer_trig="1" graph_min="0" graph_max="1295" min_step="1"/>
+    <pixels_to_boards description="LED board for each pixel" units="none" min_timer_trig="1" graph_min="0" graph_max="26" min_step="1"/>
+    <boards_to_pixels description="pixels for each LED board" units="none" min_timer_trig="1" graph_min="0" graph_max="1295" min_step="1"/>
+    <patches_to_halfBoards description="LED half board for each LED patch" units="none" min_timer_trig="1" graph_min="53" graph_max="100" min_step="1"/>
+    <halfBoards_to_patches description="LED patches for each half board" units="none" min_timer_trig="1" graph_min="431" graph_max="100" min_step="1"/>
 </CTSArrayContolSystem>

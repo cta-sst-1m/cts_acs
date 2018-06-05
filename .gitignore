@@ -6,5 +6,5 @@ lib/CTSArrayContolSystemImpl.jar
 lib/python/site-packages/CTSArrayContolSystem_idl.py
 *.a
 *.so
-
+.idea/
 

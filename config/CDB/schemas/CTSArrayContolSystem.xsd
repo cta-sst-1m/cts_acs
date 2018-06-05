@@ -13,19 +13,41 @@
   <xs:complexType name="CTSArrayContolSystemType">
     <xs:sequence>
       <xs:element name="opcuaTime" type="baci:ROlong"/>
-      <xs:element name="board0_AC_DCDC" type="baci:ROlong"/>
-      <xs:element name="board0_DC_DCDC" type="baci:ROlong"/>
-      <xs:element name="board0_DC_DAC" type="baci:ROlongLong"/>
-      <xs:element name="patch1_AC_DAC" type="baci:ROlongLong"/>
+      <xs:element name="patches_AC_DAC" type="baci:ROlongLong"/>
+      <xs:element name="boards_DC_DAC" type="baci:ROlongLong"/>
+      <xs:element name="patches_AC_offset" type="baci:ROlongLong"/>
+      <xs:element name="boards_DC_offset" type="baci:ROlongLong"/>
+      <xs:element name="pixels_AC_status" type="baci:ROlong"/>
+      <xs:element name="pixels_DC_status" type="baci:ROlong"/>
+      <xs:element name="pixels_to_patches" type="baci:ROlongLong"/>
+      <xs:element name="patches_to_pixels" type="baci:ROlongLong"/>
+      <xs:element name="pixels_to_halfBoards" type="baci:ROlongLong"/>
+      <xs:element name="halfBoards_to_pixels" type="baci:ROlongLong"/>
+      <xs:element name="pixels_to_boards" type="baci:ROlongLong"/>
+      <xs:element name="boards_to_pixels" type="baci:ROlongLong"/>
+      <xs:element name="patches_to_halfBoards" type="baci:ROlongLong"/>
+      <xs:element name="halfBoards_to_patches" type="baci:ROlongLong"/>
+
+
     </xs:sequence>
 
     <xs:attribute name="opc_uri" type="xs:string" use="optional"/>
 
     <xs:attribute name="opcuaTime_var" type="xs:string" use="optional"/>
-    <xs:attribute name="board0_AC_DCDC_var" type="xs:string" use="optional"/>
-    <xs:attribute name="board0_DC_DCDC_var" type="xs:string" use="optional"/>
-    <xs:attribute name="board0_DC_DAC_var" type="xs:string" use="optional"/>
-    <xs:attribute name="patch1_AC_DAC_var" type="xs:string" use="optional"/>
+    <xs:attribute name="patches_AC_DAC_var" type="xs:string" use="optional"/>
+    <xs:attribute name="boards_DC_DAC_var" type="xs:string" use="optional"/>
+    <xs:attribute name="patches_AC_offset_var" type="xs:string" use="optional"/>
+    <xs:attribute name="boards_DC_offset_var" type="xs:string" use="optional"/>
+    <xs:attribute name="pixels_AC_status_var" type="xs:string" use="optional"/>
+    <xs:attribute name="pixels_DC_status_var" type="xs:string" use="optional"/>
+    <xs:attribute name="pixels_to_patches_var" type="xs:string" use="optional"/>
+    <xs:attribute name="patches_to_pixels_var" type="xs:string" use="optional"/>
+    <xs:attribute name="pixels_to_halfBoards_var" type="xs:string" use="optional"/>
+    <xs:attribute name="halfBoards_to_pixels_var" type="xs:string" use="optional"/>
+    <xs:attribute name="pixels_to_boards_var" type="xs:string" use="optional"/>
+    <xs:attribute name="boards_to_pixels_var" type="xs:string" use="optional"/>
+    <xs:attribute name="patches_to_halfBoards_var" type="xs:string" use="optional"/>
+    <xs:attribute name="halfBoards_to_patches_var" type="xs:string" use="optional"/>
     <xs:attribute name="Methods_CTS_var" type="xs:string" use="optional"/>
   </xs:complexType>
   <xs:element name="CTSArrayContolSystem" type="CTSArrayContolSystemType"/>
