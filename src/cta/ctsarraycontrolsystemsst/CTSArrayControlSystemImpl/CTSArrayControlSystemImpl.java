@@ -140,12 +140,14 @@ public class CTSArrayControlSystemImpl extends CharacteristicComponentImpl imple
 		try {
             // Creates keys for properties
 			createPropertyLong(KEY_OPCUATIME);
+			/*
 			createPropertyIntegers(KEY_PATCHES_AC_DAC, KEY_PATCHES_AC_DAC, getPropertyCharacteristic(KEY_PATCHES_AC_DAC + OPCUA_VAR));
             createPropertyIntegers(KEY_BOARDS_DC_DAC, KEY_BOARDS_DC_DAC, getPropertyCharacteristic(KEY_BOARDS_DC_DAC + OPCUA_VAR));
             createPropertyIntegers(KEY_PATCHES_AC_OFFSET, KEY_PATCHES_AC_OFFSET, getPropertyCharacteristic(KEY_PATCHES_AC_OFFSET + OPCUA_VAR));
             createPropertyIntegers(KEY_BOARDS_DC_OFFSET, KEY_BOARDS_DC_OFFSET, getPropertyCharacteristic(KEY_BOARDS_DC_OFFSET + OPCUA_VAR));
             createPropertyBooleans(KEY_PIXELS_AC_STATUS, KEY_PIXELS_AC_STATUS, getPropertyCharacteristic(KEY_PIXELS_AC_STATUS + OPCUA_VAR));
             createPropertyBooleans(KEY_PIXELS_DC_STATUS, KEY_PIXELS_DC_STATUS, getPropertyCharacteristic(KEY_PIXELS_DC_STATUS + OPCUA_VAR));
+
             createPropertyIntegers(KEY_PIXELS_TO_PATCHES, KEY_PIXELS_TO_PATCHES, getPropertyCharacteristic(KEY_PIXELS_TO_PATCHES + OPCUA_VAR));
             createPropertyIntegers(KEY_PATCHES_TO_PIXELS, KEY_PATCHES_TO_PIXELS, getPropertyCharacteristic(KEY_PATCHES_TO_PIXELS + OPCUA_VAR));
             createPropertyIntegers(KEY_PIXELS_TO_HALFBOARDS, KEY_PIXELS_TO_HALFBOARDS, getPropertyCharacteristic(KEY_PIXELS_TO_HALFBOARDS + OPCUA_VAR));
@@ -154,6 +156,7 @@ public class CTSArrayControlSystemImpl extends CharacteristicComponentImpl imple
             createPropertyIntegers(KEY_BOARDS_TO_PIXELS, KEY_BOARDS_TO_PIXELS, getPropertyCharacteristic(KEY_BOARDS_TO_PIXELS + OPCUA_VAR));
             createPropertyIntegers(KEY_PATCHES_TO_HALFBOARDS, KEY_PATCHES_TO_HALFBOARDS, getPropertyCharacteristic(KEY_PATCHES_TO_HALFBOARDS + OPCUA_VAR));
             createPropertyIntegers(KEY_HALFBOARDS_TO_PATCHES, KEY_HALFBOARDS_TO_PATCHES, getPropertyCharacteristic(KEY_HALFBOARDS_TO_PATCHES + OPCUA_VAR));
+            */
 		} catch (Exception e) {
 			m_logger.warning("Exception occured while initializing: " + e.toString());
 			return;
@@ -164,6 +167,7 @@ public class CTSArrayControlSystemImpl extends CharacteristicComponentImpl imple
 	public ROlongLong opcuaTime() {
 		return (ROlongLong) getProperty(KEY_OPCUATIME);
 	}
+/*
 	@Override
 	public ROlongSeq patches_AC_DAC() {
 		return (ROlongSeq) getProperty(KEY_PATCHES_AC_DAC);
@@ -188,7 +192,6 @@ public class CTSArrayControlSystemImpl extends CharacteristicComponentImpl imple
 	public ROlongSeq pixels_DC_status() {
 		return (ROlongSeq) getProperty(KEY_PIXELS_DC_STATUS);
 	}
-	/*
     @Override
 	public ROlongSeq pixels_to_patches() {
 		return (ROlongSeq) getProperty(KEY_PIXELS_TO_PATCHES);
@@ -221,6 +224,7 @@ public class CTSArrayControlSystemImpl extends CharacteristicComponentImpl imple
 	public ROlongSeq halfBoards_to_patches() {
 		return (ROlongSeq) getProperty(KEY_HALFBOARDS_TO_PATCHES);
 	}
+
 	*/
     // overide functions to call OPCUA functions
     @Override
