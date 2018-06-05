@@ -222,122 +222,122 @@ public class CTSArrayControlSystemImpl extends CharacteristicComponentImpl imple
 	}
     // overide functions to call OPCUA functions
     @Override
-    public int set_board_DC_DAC(int inBoard, int inLevel) {
+    public String set_board_DC_DAC(int inBoard, int inLevel) {
 		return execUAMethod(
 		    METHODS_CTS, "set_board_DC_DAC", new Object[] {inBoard, inLevel}
 		);
 	}
     @Override
-    public int set_patch_AC_DAC(int inPatch, int inLevel) {
+    public String set_patch_AC_DAC(int inPatch, int inLevel) {
 		return execUAMethod(
 		    METHODS_CTS, "set_patch_AC_DAC", new Object[] {inPatch, inLevel}
 		);
 	}
     @Override
-    public int set_board_DC_offset(int inBoard, int inOffset) {
+    public String set_board_DC_offset(int inBoard, int inOffset) {
 		return execUAMethod(
 		    METHODS_CTS, "set_board_DC_offset", new Object[] {inBoard, inOffset}
 		);
 	}
     @Override
-    public int set_patch_AC_offset(int inPatch, int inOffset) {
+    public String set_patch_AC_offset(int inPatch, int inOffset) {
 		return execUAMethod(
 		    METHODS_CTS, "set_patch_AC_offset", new Object[] {inPatch, inOffset}
 		);
 	}
     @Override
-	public int set_halfBoard_AC_DAC(int inHalfBoard, int inLevel) {
+	public String set_halfBoard_AC_DAC(int inHalfBoard, int inLevel) {
 		return execUAMethod(
 		    METHODS_CTS, "set_halfBoard_AC_DAC", new Object[] {inHalfBoard, inLevel}
 		);
 	}
     @Override
-    public int  set_halfBoard_AC_offset(int inHalfBoard, int inOffset) {
+    public String  set_halfBoard_AC_offset(int inHalfBoard, int inOffset) {
 		return execUAMethod(
 		    METHODS_CTS, "set_halfBoard_AC_offset", new Object[] {inHalfBoard, inOffset}
 		);
 	}
     @Override
-    public int set_leds_AC_in_halfBoard_status(int inHalfBoard, int inHalfBoardStatus) {
+    public String set_leds_AC_in_halfBoard_status(int inHalfBoard, int inHalfBoardStatus) {
 		return execUAMethod(
 		    METHODS_CTS, "set_leds_AC_in_halfBoard_status", new Object[] {inHalfBoard, inHalfBoardStatus}
 		);
 	}
     @Override
-    public int set_leds_DC_in_halfBoard_status(int inHalfBoard, int inHalfBoardStatus) {
+    public String set_leds_DC_in_halfBoard_status(int inHalfBoard, int inHalfBoardStatus) {
 		return execUAMethod(
 		    METHODS_CTS, "set_leds_DC_in_halfBoard_status", new Object[] {inHalfBoard, inHalfBoardStatus}
 		);
 	}
     // broadcasted functions
     @Override
-    public int set_all_DAC(int inLevelDC, int inLevelAC) {
+    public String set_all_DAC(int inLevelDC, int inLevelAC) {
 		return execUAMethod(
 		    METHODS_CTS, "set_all_DAC", new Object[] {inLevelDC, inLevelAC}
 		);
 	}
     @Override
-    public int set_all_offset(int inOffsetDC, int inOffsetAC) {
+    public String set_all_offset(int inOffsetDC, int inOffsetAC) {
 		return execUAMethod(
 		    METHODS_CTS, "set_all_offset", new Object[] {inOffsetDC, inOffsetAC}
 		);
 	}
     // Functions with arrays
     @Override
-    public int set_patches_AC_DAC(String inPatchesLevel) {
+    public String set_patches_AC_DAC(String inPatchesLevel) {
 		return execUAMethod(
 		    METHODS_CTS, "set_patches_AC_DAC", new Object[] {inPatchesLevel}
 		);
 	}
     @Override
-    public int set_boards_DC_DAC(String inBoardsLevel) {
+    public String set_boards_DC_DAC(String inBoardsLevel) {
 		return execUAMethod(
 		    METHODS_CTS, "set_boards_DC_DAC", new Object[] {inBoardsLevel}
 		);
 	}
     @Override
-    public int set_patches_AC_offset(String inPatchesOffset) {
+    public String set_patches_AC_offset(String inPatchesOffset) {
 		return execUAMethod(
 		    METHODS_CTS, "set_patches_AC_offset", new Object[] {inPatchesOffset}
 		);
 	}
     @Override
-    public int set_boards_DC_offset(String inBoardsOffset) {
+    public String set_boards_DC_offset(String inBoardsOffset) {
 		return execUAMethod(
 		    METHODS_CTS, "set_boards_DC_offset", new Object[] {inBoardsOffset}
 		);
 	}
     @Override
-    public int set_pixels_DC_status(String inPixelsSatuts) {
+    public String set_pixels_DC_status(String inPixelsSatuts) {
 		return execUAMethod(
 		    METHODS_CTS, "set_pixels_dc_status", new Object[] {inPixelsSatuts}
 		);
 	}
     @Override
-    public int set_pixels_AC_status(String inPixelsSatuts) {
+    public String set_pixels_AC_status(String inPixelsSatuts) {
 		return execUAMethod(
 		    METHODS_CTS, "set_pixels_ac_status", new Object[] {inPixelsSatuts}
 		);
 	}
     @Override
-    public int set_pixels_AC_DAC(String inPixelsLevel) {
+    public String set_pixels_AC_DAC(String inPixelsLevel) {
 		return execUAMethod(
 		    METHODS_CTS, "set_pixels_ac_DAC", new Object[] {inPixelsLevel}
 		);
 	}
     @Override
-    public int set_pixels_DC_DAC(String inPixelsLevel) {
+    public String set_pixels_DC_DAC(String inPixelsLevel) {
 		return execUAMethod(
 		    METHODS_CTS, "set_pixels_dc_DAC", new Object[] {inPixelsLevel}
 		);
 	}
     @Override
-    public int set_pixels_AC_offset(String inPixelsOffset) {
+    public String set_pixels_AC_offset(String inPixelsOffset) {
 		return execUAMethod(
 		    METHODS_CTS, "set_pixels_ac_offset", new Object[] {inPixelsOffset}
 		);
 	}
-    public int set_pixels_DC_offset(String inPixelsOffset) {
+    public String set_pixels_DC_offset(String inPixelsOffset) {
 		return execUAMethod(
 		    METHODS_CTS, "set_pixels_dc_offset", new Object[] {inPixelsOffset}
 		);
