@@ -19,6 +19,7 @@
       <xs:element name="boards_DC_offset" type="baci:ROlongSeq"/>
       <xs:element name="pixels_AC_status" type="baci:ROlongSeq"/>
       <xs:element name="pixels_DC_status" type="baci:ROlongSeq"/>
+      <!--
       <xs:element name="pixels_to_patches" type="baci:ROlongSeq"/>
       <xs:element name="patches_to_pixels" type="baci:ROlongSeq"/>
       <xs:element name="pixels_to_halfBoards" type="baci:ROlongSeq"/>
@@ -27,7 +28,7 @@
       <xs:element name="boards_to_pixels" type="baci:ROlongSeq"/>
       <xs:element name="patches_to_halfBoards" type="baci:ROlongSeq"/>
       <xs:element name="halfBoards_to_patches" type="baci:ROlongSeq"/>
-
+      -->
 
     </xs:sequence>
 

@@ -188,6 +188,7 @@ public class CTSArrayControlSystemImpl extends CharacteristicComponentImpl imple
 	public ROlongSeq pixels_DC_status() {
 		return (ROlongSeq) getProperty(KEY_PIXELS_DC_STATUS);
 	}
+	/*
     @Override
 	public ROlongSeq pixels_to_patches() {
 		return (ROlongSeq) getProperty(KEY_PIXELS_TO_PATCHES);
@@ -220,6 +221,7 @@ public class CTSArrayControlSystemImpl extends CharacteristicComponentImpl imple
 	public ROlongSeq halfBoards_to_patches() {
 		return (ROlongSeq) getProperty(KEY_HALFBOARDS_TO_PATCHES);
 	}
+	*/
     // overide functions to call OPCUA functions
     @Override
     public int set_board_DC_DAC(int inBoard, int inLevel) {
@@ -414,7 +416,6 @@ public class CTSArrayControlSystemImpl extends CharacteristicComponentImpl imple
 
 	
 	protected ROlongSeq createPropertyIntegers(String element, String name, String NodeID) throws PropertyInitializationFailed {
-		//m_logger.warning("integers name: " + name + ", NodeID: " + NodeID);
 		ROlongSeqImpl impl = new ROlongSeqImpl(element, this, addDataAccess(name, createDataAccessIntegers(name, NodeID)));
 		return (ROlongSeq) addProperty(name, ROlongSeqHelper.narrow(registerProperty(impl, new ROlongSeqPOATie(impl))));
 	}

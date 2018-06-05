@@ -22,6 +22,9 @@
     pixels_AC_status_var="ns=2;s=CTS.status.AC.pixels"
     pixels_DC_status_var="ns=2;s=CTS.status.DC.pixels"
 
+    Methods_CTS_var="ns=2;s=CTS"
+>
+    <!--
     pixels_to_patches_var="ns=2;s=CTS.mapping.pixels_to_patches"
     patches_to_pixels_var="ns=2;s=CTS.mapping.patches_to_pixels"
     pixels_to_halfBoards_var="ns=2;s=CTS.mapping.pixels_to_halfBoards"
@@ -30,8 +33,8 @@
     boards_to_pixels_var="ns=2;s=CTS.mapping.boards_to_pixels"
     patches_to_halfBoards_var="ns=2;s=CTS.mapping.patches_to_halfBoards"
     halfBoards_to_patches_var="ns=2;s=CTS.mapping.halfBoards_to_patches"
-    Methods_CTS_var="ns=2;s=CTS"
->
+    -->
+    
     <opcuaTime description="OPC UA server Unix timestamp" units="s" min_timer_trig="1" graph_min="0" graph_max="100" min_step="1"/>
 
     <patches_AC_DAC description="ADC values for all AC patches" units="LSB" min_timer_trig="1" graph_min="0" graph_max="1023" min_step="1"/>
