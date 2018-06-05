@@ -7,7 +7,7 @@
    - History:
    -	2018-03-15: created
   -->
-<CTSArrayControlSystem 
+<CTSArrayControlSystem
     xmlns="urn:schemas-cosylab-com:CTSArrayControlSystem:1.0"
     xmlns:baci="urn:schemas-cosylab-com:BACI:1.0" 
     xmlns:cdb="urn:schemas-cosylab-com:CDB:1.0"
@@ -44,7 +44,6 @@
     <boards_DC_offset description="ADC offset values for all DC boards" units="LSB" min_timer_trig="1" graph_min="0" graph_max="1023" min_step="1"/>
     <pixels_AC_status description="status of AC LEDs for all pixels" units="none" min_timer_trig="1" graph_min="0" graph_max="1" min_step="1"/>
     <pixels_DC_status description="status of DC LEDs for all pixels" units="none" min_timer_trig="1" graph_min="0" graph_max="1" min_step="1"/>
-
     <pixels_to_patches description="LED patch for each pixel" units="none" min_timer_trig="1" graph_min="0" graph_max="431" min_step="1"/>
     <patches_to_pixels description="pixels for each LED patch" units="none" min_timer_trig="1" graph_min="0" graph_max="1295" min_step="1"/>
     <pixels_to_halfBoards description="LED half board for each pixel" units="none" min_timer_trig="1" graph_min="0" graph_max="53" min_step="1"/>

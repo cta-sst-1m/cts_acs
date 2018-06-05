@@ -224,8 +224,7 @@ public class CTSArrayControlSystemImpl extends CharacteristicComponentImpl imple
 	public ROlongSeq halfBoards_to_patches() {
 		return (ROlongSeq) getProperty(KEY_HALFBOARDS_TO_PATCHES);
 	}
-
-	*/
+*/
     // overide functions to call OPCUA functions
     @Override
     public int set_board_DC_DAC(int inBoard, int inLevel) {
