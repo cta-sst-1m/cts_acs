@@ -214,11 +214,11 @@ public class CTSArrayControlSystemImpl extends CharacteristicComponentImpl imple
 	}
     @Override
 	public ROdoubleSeq patches_to_halfBoards() {
-		return (ROlongSeq) getProperty(KEY_PATCHES_TO_HALFBOARDS);
+		return (ROdoubleSeq) getProperty(KEY_PATCHES_TO_HALFBOARDS);
 	}
     @Override
 	public ROdoubleSeq halfBoards_to_patches() {
-		return (ROlongSeq) getProperty(KEY_HALFBOARDS_TO_PATCHES);
+		return (ROdoubleSeq) getProperty(KEY_HALFBOARDS_TO_PATCHES);
 	}
     // overide functions to call OPCUA functions
     @Override
