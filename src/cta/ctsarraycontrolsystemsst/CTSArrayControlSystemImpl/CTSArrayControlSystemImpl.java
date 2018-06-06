@@ -118,9 +118,10 @@ public class CTSArrayControlSystemImpl extends CharacteristicComponentImpl imple
 
 
     private static final String KEY_OPCUATIME="opcuaTime";
+    private static final String KEY_BOARDS_DC_DAC="boards_DC_DAC";
+
     /*
     private static final String KEY_PATCHES_AC_DAC="patches_AC_DAC";
-    private static final String KEY_BOARDS_DC_DAC="boards_DC_DAC";
     private static final String KEY_PATCHES_AC_OFFSET="patches_AC_offset";
     private static final String KEY_BOARDS_DC_OFFSET="boards_DC_offset";
     private static final String KEY_PIXELS_AC_STATUS="pixels_AC_status";
