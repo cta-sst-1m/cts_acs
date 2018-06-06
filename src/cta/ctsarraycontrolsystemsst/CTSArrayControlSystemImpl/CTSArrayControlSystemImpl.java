@@ -92,9 +92,19 @@ import cta.ctsarraycontrolsystemsst.CTSArrayControlSystemImpl.UaDataSupportInteg
  * @author vsliusar, UA
  * @author yrenier, unige
  *
- * @version $Revision: 001 $ : $LastChangedDate: 2015-12-13 12:51:23 +0200 (Sun,
- *          13 Dec 2015) $
+ * @version $Revision: 001 $ : $LastChangedDate: 2018 June 6 $
+ *
+ * Copied from Component helper class:
+ *
+ * To create an entry for your component in the Configuration Database,
+ * copy the line below into a new entry in the file $ACS_CDB/MACI/Components/Components.xml
+ * and modify the instance name of the component and the container:
+ * <p>
+ * Name="CHARACTERISTICCOMPONENT_1" Code="alma.ACS.CharacteristicComponentImpl.CharacteristicComponentComponentHelper" Type="IDL:alma/ACS/CharacteristicComponent:1.0" Container="frodoContainer" ImplLang="java"
+ * <p>
+ * @author alma-component-helper-generator-tool
  */
+
 public class CTSArrayControlSystemImpl extends CharacteristicComponentImpl implements CTSArrayControlSystemOperations {
 	//protected Logger logger;
 
@@ -107,15 +117,15 @@ public class CTSArrayControlSystemImpl extends CharacteristicComponentImpl imple
 	protected static final String OPCUA_VAR = "_var";
 
 
-	private static final String METHODS_CTS="Methods_CTS";
-	
     private static final String KEY_OPCUATIME="opcuaTime";
+    /*
     private static final String KEY_PATCHES_AC_DAC="patches_AC_DAC";
     private static final String KEY_BOARDS_DC_DAC="boards_DC_DAC";
     private static final String KEY_PATCHES_AC_OFFSET="patches_AC_offset";
     private static final String KEY_BOARDS_DC_OFFSET="boards_DC_offset";
     private static final String KEY_PIXELS_AC_STATUS="pixels_AC_status";
     private static final String KEY_PIXELS_DC_STATUS="pixels_DC_status";
+
     private static final String KEY_PIXELS_TO_PATCHES="pixels_to_patches";
     private static final String KEY_PATCHES_TO_PIXELS="patches_to_pixels";
     private static final String KEY_PIXELS_TO_HALFBOARDS="pixels_to_halfBoards";
@@ -124,7 +134,7 @@ public class CTSArrayControlSystemImpl extends CharacteristicComponentImpl imple
     private static final String KEY_BOARDS_TO_PIXELS="boards_to_pixels";
     private static final String KEY_PATCHES_TO_HALFBOARDS="patches_to_halfBoards";
     private static final String KEY_HALFBOARDS_TO_PATCHES="halfBoards_to_patches";
-
+    */
 
 	private Map<String, Property> mapProperties = new HashMap<String, Property>();
 	private Map<String, DataAccess> mapDataAccess = new HashMap<String, DataAccess>();
@@ -229,122 +239,123 @@ public class CTSArrayControlSystemImpl extends CharacteristicComponentImpl imple
     @Override
     public int set_board_DC_DAC(int inBoard, int inLevel) {
 		return execUAMethod(
-		    METHODS_CTS, "set_board_DC_DAC", new Object[] {inBoard, inLevel}
+		    "Methods_CTS_DAC_DC", "set_board", new Object[] {inBoard, inLevel}
 		);
 	}
     @Override
     public int set_patch_AC_DAC(int inPatch, int inLevel) {
 		return execUAMethod(
-		    METHODS_CTS, "set_patch_AC_DAC", new Object[] {inPatch, inLevel}
+		    "Methods_CTS_DAC_AC", "set_patch", new Object[] {inPatch, inLevel}
 		);
 	}
     @Override
     public int set_board_DC_offset(int inBoard, int inOffset) {
 		return execUAMethod(
-		    METHODS_CTS, "set_board_DC_offset", new Object[] {inBoard, inOffset}
+		    "Methods_CTS_DACoffset_DC", "set_board", new Object[] {inBoard, inOffset}
 		);
 	}
     @Override
     public int set_patch_AC_offset(int inPatch, int inOffset) {
 		return execUAMethod(
-		    METHODS_CTS, "set_patch_AC_offset", new Object[] {inPatch, inOffset}
+		    "Methods_CTS_DACoffset_AC", "set_patch", new Object[] {inPatch, inOffset}
 		);
 	}
     @Override
 	public int set_halfBoard_AC_DAC(int inHalfBoard, int inLevel) {
 		return execUAMethod(
-		    METHODS_CTS, "set_halfBoard_AC_DAC", new Object[] {inHalfBoard, inLevel}
+		    "Methods_CTS_DAC_AC", "set_halfBoard", new Object[] {inHalfBoard, inLevel}
 		);
 	}
     @Override
     public int  set_halfBoard_AC_offset(int inHalfBoard, int inOffset) {
 		return execUAMethod(
-		    METHODS_CTS, "set_halfBoard_AC_offset", new Object[] {inHalfBoard, inOffset}
+		    "Methods_CTS_DACoffset_AC", "set_halfBoard", new Object[] {inHalfBoard, inOffset}
 		);
 	}
     @Override
     public int set_leds_AC_in_halfBoard_status(int inHalfBoard, int inHalfBoardStatus) {
 		return execUAMethod(
-		    METHODS_CTS, "set_leds_AC_in_halfBoard_status", new Object[] {inHalfBoard, inHalfBoardStatus}
+		    "Methods_CTS_status_AC", "set_leds_in_halfBoard", new Object[] {inHalfBoard, inHalfBoardStatus}
 		);
 	}
     @Override
     public int set_leds_DC_in_halfBoard_status(int inHalfBoard, int inHalfBoardStatus) {
 		return execUAMethod(
-		    METHODS_CTS, "set_leds_DC_in_halfBoard_status", new Object[] {inHalfBoard, inHalfBoardStatus}
+		    "Methods_CTS_status_DC", "set_leds_in_halfBoard", new Object[] {inHalfBoard, inHalfBoardStatus}
 		);
 	}
     // broadcasted functions
     @Override
     public int set_all_DAC(int inLevelDC, int inLevelAC) {
 		return execUAMethod(
-		    METHODS_CTS, "set_all_DAC", new Object[] {inLevelDC, inLevelAC}
+		    "Methods_CTS_DAC", "set_all", new Object[] {inLevelDC, inLevelAC}
 		);
 	}
     @Override
     public int set_all_offset(int inOffsetDC, int inOffsetAC) {
 		return execUAMethod(
-		    METHODS_CTS, "set_all_offset", new Object[] {inOffsetDC, inOffsetAC}
+		    "Methods_CTS_DACoffset", "set_all", new Object[] {inOffsetDC, inOffsetAC}
 		);
 	}
     // Functions with arrays
     @Override
     public int set_patches_AC_DAC(String inPatchesLevel) {
 		return execUAMethod(
-		    METHODS_CTS, "set_patches_AC_DAC", new Object[] {inPatchesLevel}
+		    "Methods_CTS_DAC_AC", "set_patches", new Object[] {inPatchesLevel}
 		);
 	}
     @Override
     public int set_boards_DC_DAC(String inBoardsLevel) {
 		return execUAMethod(
-		    METHODS_CTS, "set_boards_DC_DAC", new Object[] {inBoardsLevel}
+		    "Methods_CTS_DAC_DC", "set_boards", new Object[] {inBoardsLevel}
 		);
 	}
     @Override
     public int set_patches_AC_offset(String inPatchesOffset) {
 		return execUAMethod(
-		    METHODS_CTS, "set_patches_AC_offset", new Object[] {inPatchesOffset}
+		    "Methods_CTS_DACoffset_AC", "set_patches", new Object[] {inPatchesOffset}
 		);
 	}
     @Override
     public int set_boards_DC_offset(String inBoardsOffset) {
 		return execUAMethod(
-		    METHODS_CTS, "set_boards_DC_offset", new Object[] {inBoardsOffset}
+		    "Methods_CTS_DACoffset_DC", "set_boards", new Object[] {inBoardsOffset}
 		);
 	}
     @Override
     public int set_pixels_DC_status(String inPixelsSatuts) {
 		return execUAMethod(
-		    METHODS_CTS, "set_pixels_dc_status", new Object[] {inPixelsSatuts}
+		    "Methods_CTS_status_DC", "set_pixels", new Object[] {inPixelsSatuts}
 		);
 	}
     @Override
     public int set_pixels_AC_status(String inPixelsSatuts) {
 		return execUAMethod(
-		    METHODS_CTS, "set_pixels_ac_status", new Object[] {inPixelsSatuts}
+		    "Methods_CTS_status_AC", "set_pixels", new Object[] {inPixelsSatuts}
 		);
 	}
     @Override
     public int set_pixels_AC_DAC(String inPixelsLevel) {
 		return execUAMethod(
-		    METHODS_CTS, "set_pixels_ac_DAC", new Object[] {inPixelsLevel}
+		    "Methods_CTS_DAC_AC", "set_pixels", new Object[] {inPixelsLevel}
 		);
 	}
     @Override
     public int set_pixels_DC_DAC(String inPixelsLevel) {
 		return execUAMethod(
-		    METHODS_CTS, "set_pixels_dc_DAC", new Object[] {inPixelsLevel}
+		    "Methods_CTS_DAC_DC", "set_pixels", new Object[] {inPixelsLevel}
 		);
 	}
     @Override
     public int set_pixels_AC_offset(String inPixelsOffset) {
 		return execUAMethod(
-		    METHODS_CTS, "set_pixels_ac_offset", new Object[] {inPixelsOffset}
+		    "Methods_CTS_DACoffset_AC", "set_pixels", new Object[] {inPixelsOffset}
 		);
 	}
+    @Override
     public int set_pixels_DC_offset(String inPixelsOffset) {
 		return execUAMethod(
-		    METHODS_CTS, "set_pixels_dc_offset", new Object[] {inPixelsOffset}
+		    "Methods_CTS_DACoffset_DC", "set_pixels", new Object[] {inPixelsOffset}
 		);
 	}
 	

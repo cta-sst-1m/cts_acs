@@ -52,7 +52,14 @@
     <xs:attribute name="patches_to_halfBoards_var" type="xs:string" use="optional"/>
     <xs:attribute name="halfBoards_to_patches_var" type="xs:string" use="optional"/>
     -->
-    <xs:attribute name="Methods_CTS_var" type="xs:string" use="optional"/>
+    <xs:attribute name="Methods_CTS_DAC_var" type="xs:string" use="optional"/>
+    <xs:attribute name="Methods_CTS_DAC_AC_var" type="xs:string" use="optional"/>
+    <xs:attribute name="Methods_CTS_DAC_DC_var" type="xs:string" use="optional"/>
+    <xs:attribute name="Methods_CTS_DACoffset_var" type="xs:string" use="optional"/>
+    <xs:attribute name="Methods_CTS_DACoffset_AC_var" type="xs:string" use="optional"/>
+    <xs:attribute name="Methods_CTS_DACoffset_DC_var" type="xs:string" use="optional"/>
+    <xs:attribute name="Methods_CTS_status_AC_var" type="xs:string" use="optional"/>
+    <xs:attribute name="Methods_CTS_status_DC_var" type="xs:string" use="optional"/>
   </xs:complexType>
   <xs:element name="CTSArrayControlSystem" type="CTSArrayControlSystemType"/>
 </xs:schema>
