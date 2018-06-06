@@ -182,6 +182,10 @@ public class CTSArrayControlSystemImpl extends CharacteristicComponentImpl imple
 	public ROlongSeq boards_DC_DAC() {
 		return (ROlongSeq) getProperty(KEY_BOARDS_DC_DAC);
 	}
+	@Override
+	public ROlongSeq _get_boards_DC_DAC() {
+		return (ROlongSeq) getProperty(KEY_BOARDS_DC_DAC);
+	}
 /*
 	@Override
 	public ROlongSeq patches_AC_DAC() {
