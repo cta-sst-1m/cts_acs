@@ -13,7 +13,10 @@
     xmlns:cdb="urn:schemas-cosylab-com:CDB:1.0"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     opc_uri="opc.tcp://129.194.51.113:4843/cameraslowcontrol/server/"
+
     opcuaTime_var="ns=2;s=CTS.time"
+    boards_DC_DAC_var="ns=2;s=CTS.DAC.DC.boards"
+
     Methods_CTS_DAC_var="ns=2;s=CTS.DAC"
     Methods_CTS_DAC_AC_var="ns=2;s=CTS.DAC.AC"
     Methods_CTS_DAC_DC_var="ns=2;s=CTS.DAC.DC"
@@ -25,7 +28,6 @@
 >
     <!--
     patches_AC_DAC_var="ns=2;s=CTS.DAC.AC.patches"
-    boards_DC_DAC_var="ns=2;s=CTS.DAC.DC.boards"
     patches_AC_offset_var="ns=2;s=CTS.DACoffset.AC.patches"
     boards_DC_offset_var="ns=2;s=CTS.DACoffset.DC.boards"
     pixels_AC_status_var="ns=2;s=CTS.status.AC.pixels"
@@ -42,9 +44,9 @@
     -->
 
     <opcuaTime description="OPC UA server Unix timestamp" units="s" min_timer_trig="1" graph_min="0" graph_max="100" min_step="1"/>
+    <boards_DC_DAC description="ADC values for all DC boards" units="LSB" min_timer_trig="1" graph_min="0" graph_max="1023" min_step="1"/>
     <!--
     <patches_AC_DAC description="ADC values for all AC patches" units="LSB" min_timer_trig="1" graph_min="0" graph_max="1023" min_step="1"/>
-    <boards_DC_DAC description="ADC values for all DC boards" units="LSB" min_timer_trig="1" graph_min="0" graph_max="1023" min_step="1"/>
     <patches_AC_offset description="ADC offset values for all AC patches" units="LSB" min_timer_trig="1" graph_min="0" graph_max="1023" min_step="1"/>
     <boards_DC_offset description="ADC offset values for all DC boards" units="LSB" min_timer_trig="1" graph_min="0" graph_max="1023" min_step="1"/>
     <pixels_AC_status description="status of AC LEDs for all pixels" units="none" min_timer_trig="1" graph_min="0" graph_max="1" min_step="1"/>

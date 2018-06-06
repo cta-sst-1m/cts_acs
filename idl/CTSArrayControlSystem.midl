@@ -49,9 +49,9 @@ module ctsarraycontrolsystemsst {
     **/
     readonly attribute ACS::ROlongLong opcuaTime;
     //Properties describing CTS status
+    readonly attribute ACS::ROlongSeq boards_DC_DAC;
 /*
     readonly attribute ACS::ROlongSeq patches_AC_DAC;
-    readonly attribute ACS::ROlongSeq boards_DC_DAC;
     readonly attribute ACS::ROlongSeq patches_AC_offset;
     readonly attribute ACS::ROlongSeq boards_DC_offset;
     readonly attribute ACS::ROlongSeq pixels_AC_status;

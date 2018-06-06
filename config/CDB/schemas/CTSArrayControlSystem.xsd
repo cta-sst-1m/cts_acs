@@ -13,9 +13,9 @@
   <xs:complexType name="CTSArrayControlSystemType">
     <xs:sequence>
       <xs:element name="opcuaTime" type="baci:ROlong"/>
+      <xs:element name="boards_DC_DAC" type="baci:ROlongSeq"/>
       <!--
       <xs:element name="patches_AC_DAC" type="baci:ROlongSeq"/>
-      <xs:element name="boards_DC_DAC" type="baci:ROlongSeq"/>
       <xs:element name="patches_AC_offset" type="baci:ROlongSeq"/>
       <xs:element name="boards_DC_offset" type="baci:ROlongSeq"/>
       <xs:element name="pixels_AC_status" type="baci:ROlongSeq"/>
@@ -36,9 +36,9 @@
     <xs:attribute name="opc_uri" type="xs:string" use="optional"/>
 
     <xs:attribute name="opcuaTime_var" type="xs:string" use="optional"/>
+    <xs:attribute name="boards_DC_DAC_var" type="xs:string" use="optional"/>
     <!--
     <xs:attribute name="patches_AC_DAC_var" type="xs:string" use="optional"/>
-    <xs:attribute name="boards_DC_DAC_var" type="xs:string" use="optional"/>
     <xs:attribute name="patches_AC_offset_var" type="xs:string" use="optional"/>
     <xs:attribute name="boards_DC_offset_var" type="xs:string" use="optional"/>
     <xs:attribute name="pixels_AC_status_var" type="xs:string" use="optional"/>
